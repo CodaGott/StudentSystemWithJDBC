@@ -28,4 +28,13 @@ public class Student {
     public void setStudentAddress(String studentAddress) {
         this.studentAddress = studentAddress;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "rollNo=" + rollNo +
+                ", studentName='" + studentName + '\'' +
+                ", studentAddress='" + studentAddress + '\'' +
+                '}';
+    }
 }
