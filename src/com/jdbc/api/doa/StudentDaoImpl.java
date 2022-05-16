@@ -1,6 +1,7 @@
 package com.jdbc.api.doa;
 
 import com.jdbc.api.Student;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
@@ -10,6 +11,7 @@ public class StudentDaoImpl implements StudentDao{
 
 
 
+    @Autowired
     private JdbcTemplate jdbcTemplate = new JdbcTemplate(getDataSource());
 
     @Override
@@ -21,6 +23,15 @@ public class StudentDaoImpl implements StudentDao{
         int numOfRowInserted = jdbcTemplate.update(sql, students);
 
         System.out.println("Number of row inserted is: " + numOfRowInserted);
+    }
+
+    @Override
+    public Boolean delete(int rollNo) {
+        String sql = "DELETE FROM STUDENT WHERE ROLL_NO = ?";
+
+        int numDeletedRow = jdbcTemplate.update(sql, rollNo);
+        System.out.println("Number of rows deleted: " + numDeletedRow);
+        return numDeletedRow >= 1;
     }
 
     public DataSource getDataSource() {
