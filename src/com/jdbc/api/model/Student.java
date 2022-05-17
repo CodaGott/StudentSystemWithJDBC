@@ -1,4 +1,4 @@
-package com.jdbc.api;
+package com.jdbc.api.model;
 
 public class Student {
     private int rollNo;
