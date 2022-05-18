@@ -15,4 +15,6 @@ public interface StudentDao {
     void multipleInsert(List<Student>students);
 
     List<Student> findAllStudent();
+
+    Student findStudentById(int rollNo);
 }

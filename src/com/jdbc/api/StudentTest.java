@@ -28,6 +28,8 @@ public class StudentTest {
 //        StudentDaoHelper helper = new StudentDaoHelper();
 //        helper.setUpStudentTable();
 
-        cleanUp.findAllStudent();
+//        cleanUp.findAllStudent();
+
+        cleanUp.findStudentById(2);
     }
 }

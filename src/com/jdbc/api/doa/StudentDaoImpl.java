@@ -80,6 +80,16 @@ public class StudentDaoImpl implements StudentDao{
         return studentList;
     }
 
+    @Override
+    public Student findStudentById(int rollNo) {
+
+        String sql = "SELECT * FROM STUDENT WHERE roll_no = ?";
+        Student foundStudent = jdbcTemplate.queryForObject(sql, new StudentRowMapper(), rollNo);
+        assert foundStudent != null;
+        System.out.println("Student found: " + foundStudent);
+        return foundStudent;
+    }
+
     public DataSource getDataSource() {
         String url = "jdbc:mysql://localhost:3306/school?useSSL=false&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
         String userName = "root";
