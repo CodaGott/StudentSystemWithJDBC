@@ -22,9 +22,9 @@ public class StudentDaoHelper {
         student2.setStudentAddress("ABJ");
 
         Student student3 = new Student();
-        student1.setRollNo(3);
+        student3.setRollNo(3);
         student3.setStudentName("Abigail");
-        student1.setStudentAddress("Ikoyi");
+        student3.setStudentAddress("Ikoyi");
 
         ArrayList<Student> students = new ArrayList<>();
         students.add(student1);

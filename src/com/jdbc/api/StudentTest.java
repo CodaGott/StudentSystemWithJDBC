@@ -3,7 +3,6 @@ package com.jdbc.api;
 import com.jdbc.api.doa.StudentDao;
 import com.jdbc.api.doa.StudentDaoImpl;
 import com.jdbc.api.model.Student;
-import com.jdbc.api.util.StudentDaoHelper;
 
 public class StudentTest {
 
@@ -23,10 +22,12 @@ public class StudentTest {
 //                "Lagos, Nigeria");
 //
 //
-//        StudentDaoImpl cleanUp = new StudentDaoImpl();
+        StudentDaoImpl cleanUp = new StudentDaoImpl();
 //        cleanUp.cleanUpTable();
+//
+//        StudentDaoHelper helper = new StudentDaoHelper();
+//        helper.setUpStudentTable();
 
-        StudentDaoHelper helper = new StudentDaoHelper();
-        helper.setUpStudentTable();
+        cleanUp.findAllStudent();
     }
 }

@@ -13,4 +13,6 @@ public interface StudentDao {
     Boolean deleteStudentByNameAndAddress(String studentName, String studentAddress);
 
     void multipleInsert(List<Student>students);
+
+    List<Student> findAllStudent();
 }
