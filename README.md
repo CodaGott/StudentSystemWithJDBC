@@ -1,1 +1,1 @@
-﻿# Student Management System built With JDBC
+﻿# Student Management System built With JDBC and Core Java
